@@ -24,6 +24,24 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('CompletarFormularioUsuario',
+   (password, firstname, lastName, company, address1, address2, state, city, zipcode, mobileNumber)=>{
+    cy.get('#password').type(password)
+    cy.get('#first_name').type(firstname)
+    cy.get('#last_name').type(lastName)    
+    cy.get('#company').type(company) 
+    cy.get('#address1').type(address1) 
+    cy.get('#address2').type(address2)     
+    cy.get('#state').type(state) 
+    cy.get('#city').type(city) 
+    cy.get('#zipcode').type(zipcode) 
+    cy.get('#mobile_number').type(mobileNumber) 
+ })
+
+
+
+
+
 Cypress.Commands.add('informarRegistroUsuario',(userName, email)=>{
     cy.get('input[data-qa="signup-name"]').type(userName)
     cy.get('input[data-qa="signup-email"]').type(email)    

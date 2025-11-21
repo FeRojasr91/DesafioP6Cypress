@@ -18,8 +18,7 @@ class RegUser{
     clickEnSignUp(){
         cy.get(el.botonSignUp).click()
     }
-    
-
 
 }
+
 export default new RegUser()

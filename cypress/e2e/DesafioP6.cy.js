@@ -6,7 +6,11 @@ import FormRegUsuario from '../support/Pages/FormRegUsuario'
 
 describe('Desafió P06 Cypress', function() { 
 
-   
+  before(function(){
+        cy.fixture('credencialesFixture').then((datos)=>{
+            this.credencialesExt = datos
+        })
+    }) 
   
   beforeEach(function(){
     cy.newVisit('https://automationexercise.com/')
@@ -15,7 +19,7 @@ describe('Desafió P06 Cypress', function() {
   
   const RegistroUsuarioFaker = crearRegUsuariosAzar()
   const LlenarFormularioFaker = completarFormRegUsuario()
-  it.only('Realizar Registro Exitoso', function(){
+  it('Realizar Registro Exitoso', function(){
 
     //Crear cuenta ingresando UserName y Email
     cy.get('a[href="/login"]').click()
@@ -37,6 +41,14 @@ describe('Desafió P06 Cypress', function() {
        
   })
 
+  it.only('Realizar Registro con Usuario/Correo existente', function(){
+    cy.get('a[href="/login"]').click()
+    RegUser.completarName(this.credencialesExt.users.usuarioRegistrado)
+    RegUser.completarEmail(this.credencialesExt.emails.emailRegistrado)
+    RegUser.clickEnSignUp()
+    RegUser.validarMensajeError('Email Address already exist!')
+  })
+  //Crear nuevo elements e index para cambiar el RegUser por uno nuevo que solo valide ello y añadir accesso por log.
 
   //Continuar con los otros Test
 

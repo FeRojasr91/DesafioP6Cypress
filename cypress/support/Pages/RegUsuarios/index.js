@@ -19,6 +19,10 @@ class RegUser{
         cy.get(el.botonSignUp).click()
     }
 
+    validarMensajeError(error){
+        cy.contains(error).should('be.visible')
+    }
+
 }
 
 export default new RegUser()

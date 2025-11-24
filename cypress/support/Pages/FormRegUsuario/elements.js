@@ -16,6 +16,7 @@ export const ELEMENTS ={
     campoZipcode: '#zipcode',
     campoMobileNumber: '#mobile_number',
     botonCrearCuenta: 'button[data-qa="create-account"]',
-    botonContinuar: 'a[class="btn btn-primary"]'  
+    botonContinuar: 'a[class="btn btn-primary"]',
+    mensajeCuentaCreada: 'h2[class="title text-center"]'
 
 }

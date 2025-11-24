@@ -73,6 +73,9 @@ class FormRegUser{
     clickBotonContinuar(){
         cy.get(el.botonContinuar).click()
     }
+    MensajeCuentaCreadaOK(){
+        cy.get(el.mensajeCuentaCreada).should('have.text','Account Created!')
+    }
 
 }
 

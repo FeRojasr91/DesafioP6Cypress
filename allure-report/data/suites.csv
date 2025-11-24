@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7898","Realizar Login exitoso","","Mon Nov 24 17:43:02 CLST 2025","passed","Mon Nov 24 17:43:10 CLST 2025","","Desafió P06 Cypress","Desafió P06 Cypress","Realizar Login exitoso"
+"","4332","Error de inicio de sesión","","Mon Nov 24 17:43:10 CLST 2025","passed","Mon Nov 24 17:43:14 CLST 2025","","Desafió P06 Cypress","Desafió P06 Cypress","Error de inicio de sesión"
+"","4665","Realizar Registro con Usuario/Correo existente","","Mon Nov 24 17:42:57 CLST 2025","passed","Mon Nov 24 17:43:02 CLST 2025","","Desafió P06 Cypress","Desafió P06 Cypress","Realizar Registro con Usuario/Correo existente"
+"","20220","Ejecutar Compra, incluyendo pago","","Mon Nov 24 17:43:14 CLST 2025","passed","Mon Nov 24 17:43:34 CLST 2025","","Desafió P06 Cypress","Desafió P06 Cypress","Ejecutar Compra, incluyendo pago"
+"","17181","Realizar Registro Exitoso","","Mon Nov 24 17:42:40 CLST 2025","passed","Mon Nov 24 17:42:57 CLST 2025","","Desafió P06 Cypress","Desafió P06 Cypress","Realizar Registro Exitoso"

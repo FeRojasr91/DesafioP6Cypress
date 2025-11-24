@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1764016960270' stop='1764017014682'>
+    <name>Desafió P06 Cypress</name>
+    <title>Desafió P06 Cypress</title>
+    <test-cases>
+        <test-case start='1764016960270' status='passed' stop='1764016977451'>
+            <name>Realizar Registro Exitoso</name>
+            <title>Realizar Registro Exitoso</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1764016977489' status='passed' stop='1764016982154'>
+            <name>Realizar Registro con Usuario/Correo existente</name>
+            <title>Realizar Registro con Usuario/Correo existente</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1764016982182' status='passed' stop='1764016990080'>
+            <name>Realizar Login exitoso</name>
+            <title>Realizar Login exitoso</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1764016990099' status='passed' stop='1764016994431'>
+            <name>Error de inicio de sesión</name>
+            <title>Error de inicio de sesión</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1764016994462' status='passed' stop='1764017014682'>
+            <name>Ejecutar Compra, incluyendo pago</name>
+            <title>Ejecutar Compra, incluyendo pago</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

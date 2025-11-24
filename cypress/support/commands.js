@@ -64,3 +64,8 @@ Cypress.Commands.add('newVisit', (url) => {
    //Comprueba si el documento está en estado 'Completo'. Relacionado con lo configurado en cypress.config.js baseUrl: 'https://automationexercise.com/',
    cy.document().its('readyState').should('equal', 'complete');
 });
+
+/**Se agrega para este Desafio */
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false; // Previene que Cypress falle por errores de la aplicación
+});

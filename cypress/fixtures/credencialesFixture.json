@@ -3,6 +3,19 @@
     "usuarioRegistrado": "fer"
   },
   "emails":{
-    "emailRegistrado":"fer@email.com"
-  }  
+    "emailRegistrado":"fer91@email.com"
+  },
+  "passwords":{
+    "passwordRegistrada":"123456"
+  },
+  "passwordInvalida":{
+    "passwordNoRegistrada":"addsadad"
+  },
+  "datosTarOk":{
+    "nomTarjeta":"HOLA MUNDO",
+    "numTarjeta":"123124124",
+    "cvcTarjeta":"343",
+    "mesExp":"02",
+    "annoExp":"2031"
+  }
 }

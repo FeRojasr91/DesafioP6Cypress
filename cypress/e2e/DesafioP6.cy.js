@@ -54,39 +54,38 @@ describe('Desafió P06 Cypress', function() {
     //RegUserExis.completarEmail(this.credencialesExt.emails.emailRegistrado)
     cy.get('@credencialesExt').then((datos) => {
     RegUserExis.completarName(datos.users.usuarioRegistrado)
-    RegUserExis.completarEmail(datos.emails.emailRegistrado)
+    RegUserExis.completarEmail()
     })    
     RegUserExis.clickEnSignUp()
     RegUserExis.validarMensajeError('Email Address already exist!')
   })
 
   it('Realizar Login exitoso', function(){
-    Login.ClickSignUpLogin()
-    cy.get('@credencialesExt').then((datos) => {         
-    Login.completarEmailLog(datos.emails.emailRegistrado)
-    Login.completarPassLog(datos.passwords.passwordRegistrada)
-    Login.clickEnLogin()
-    })
+    Login.ClickSignUpLogin()            
+    Login.completarEmailLog()
+    Login.completarPassLog()
+    Login.clickEnLogin()    
     Login.validarInicioLogin()
   })
 
   it ('Error de inicio de sesión', function() {
     Login.ClickSignUpLogin()
     cy.get('@credencialesExt').then((datos) => {         
-    Login.completarEmailLog(datos.emails.emailRegistrado)
-    Login.completarPassLog(datos.passwordInvalida.passwordNoRegistrada)
+    Login.completarEmailLog()
+    Login.completarPassLogError(datos.passwordInvalida.passwordNoRegistrada) //Revisar
     Login.clickEnLogin()
+    Login.validarMensajeError()
     })
-    Login.validarMensajeError('Your email or password is incorrect!')
+    
   })
 
   it('Ejecutar Compra, incluyendo pago', function() {
     Login.ClickSignUpLogin()
-    cy.get('@credencialesExt').then((datos) => {         
-    Login.completarEmailLog(datos.emails.emailRegistrado)
-    Login.completarPassLog(datos.passwords.passwordRegistrada)
+           
+    Login.completarEmailLog()
+    Login.completarPassLog()
     Login.clickEnLogin()
-    })
+    
     Login.validarInicioLogin()
     EjecutarCompra.clickElegirCategoria()
     EjecutarCompra.clickCategoriaProduct()
@@ -97,7 +96,7 @@ describe('Desafió P06 Cypress', function() {
     EjecutarCompra.clickBotonPago()
     EjecutarCompra.mensajeVentanaPago()
 
-    cy.get('@credencialesExt').then((datos) => {
+    cy.get('@credencialesExt').then((datos) => { //También debería incorporar estos datos en cypress.env.json
     EjecutarCompra.completarNomTarjeta(datos.datosTarOk.nomTarjeta)
     EjecutarCompra.completarNumTarjeta(datos.datosTarOk.numTarjeta)
     EjecutarCompra.completarCVC(datos.datosTarOk.cvcTarjeta)

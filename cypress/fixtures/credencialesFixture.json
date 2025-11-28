@@ -2,12 +2,6 @@
   "users":{
     "usuarioRegistrado": "fer"
   },
-  "emails":{
-    "emailRegistrado":"fer91@email.com"
-  },
-  "passwords":{
-    "passwordRegistrada":"123456"
-  },
   "passwordInvalida":{
     "passwordNoRegistrada":"addsadad"
   },

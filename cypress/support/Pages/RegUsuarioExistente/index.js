@@ -11,8 +11,8 @@ class RegUserExis{
         cy.get(el.campoUserNameEx).type(userName)
     }
 
-    completarEmail(email){
-        cy.get(el.campoEmailEx).type(email)
+    completarEmail(){
+        cy.get(el.campoEmailEx).type(Cypress.env('emailRegistradoS'))
     }
 
     clickEnSignUp(){

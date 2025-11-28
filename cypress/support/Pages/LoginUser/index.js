@@ -6,12 +6,16 @@ class Login{
         cy.get(el.irSignUpLogin).click()
     }
 
-    completarEmailLog(email){
-        cy.get(el.campoEmailLog).type(email)
+    completarEmailLog(){
+        cy.get(el.campoEmailLog).type(Cypress.env('emailRegistradoS'))
     }
 
-    completarPassLog(password){
-        cy.get(el.campoPassLog).type(password)
+    completarPassLog(){
+        cy.get(el.campoPassLog).type(Cypress.env('passwordRegistradaS'),{log:false})
+    }
+
+    completarPassLogError(passError){
+        cy.get(el.campoPassLog).type(passError)
     }
 
     clickEnLogin(){
@@ -22,8 +26,8 @@ class Login{
         cy.contains('Logout').should('be.visible')
     }
 
-    validarMensajeError(error){        
-        cy.contains(error).should('be.visible')
+    validarMensajeError(){        
+        cy.contains('Your email or password is incorrect!').should('be.visible')
     }    
 
 }

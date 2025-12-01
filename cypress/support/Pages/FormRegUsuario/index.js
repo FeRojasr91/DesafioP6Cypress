@@ -7,6 +7,10 @@ class FormRegUser{
         cy.contains('Enter Account InformationAddress Information').should('be.visible')        
     }
 
+    validarAccesoFormulario(){
+        cy.get('h2[class="title text-center"]').should('have.text','Enter Account InformationAddress Information')
+    }
+
     completarGenero(){
         cy.get(el.campoGenero).click()
     }

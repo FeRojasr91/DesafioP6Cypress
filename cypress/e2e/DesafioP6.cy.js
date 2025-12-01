@@ -25,6 +25,7 @@ describe('Desafió P06 Cypress', function() {
   
   const RegistroUsuarioFaker = crearRegUsuariosAzar()
   const LlenarFormularioFaker = completarFormRegUsuario()
+
   it('Realizar Registro Exitoso', function(){
 
     //Crear cuenta ingresando UserName y Email
@@ -33,18 +34,17 @@ describe('Desafió P06 Cypress', function() {
     RegUser.clickEnSignUp()
 
     //Completar Formulario
-    cy.get('h2[class="title text-center"]').should('have.text','Enter Account InformationAddress Information')
+    FormRegUsuario.validarAccesoFormulario()    
     FormRegUsuario.completarGenero()
     FormRegUsuario.completarDia(3)
     FormRegUsuario.completarMes(2)
     FormRegUsuario.completarAnno('2001')
     FormRegUsuario.completarCountry('Australia')
-    //FormRegUsuario.completarCountry()
     cy.CompletarFormularioUsuario(LlenarFormularioFaker.password,LlenarFormularioFaker.firstName,LlenarFormularioFaker.lastName,LlenarFormularioFaker.company,LlenarFormularioFaker.address1,LlenarFormularioFaker.address2,LlenarFormularioFaker.state,LlenarFormularioFaker.city,LlenarFormularioFaker.zipCode,LlenarFormularioFaker.mobileNumber)
     FormRegUsuario.clickCrearCuenta()
     FormRegUsuario.MensajeCuentaCreadaOK()
     FormRegUsuario.clickBotonContinuar()  
-       
+    
   })
 
   it('Realizar Registro con Usuario/Correo existente', function(){
@@ -72,7 +72,7 @@ describe('Desafió P06 Cypress', function() {
     Login.ClickSignUpLogin()
     cy.get('@credencialesExt').then((datos) => {         
     Login.completarEmailLog()
-    Login.completarPassLogError(datos.passwordInvalida.passwordNoRegistrada) //Revisar
+    Login.completarPassLogError(datos.passwordInvalida.passwordNoRegistrada)
     Login.clickEnLogin()
     Login.validarMensajeError()
     })

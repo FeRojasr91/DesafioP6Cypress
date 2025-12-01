@@ -67,5 +67,7 @@ Cypress.Commands.add('newVisit', (url) => {
 
 /**Se agrega para este Desafio */
 Cypress.on('uncaught:exception', (err, runnable) => {
-  return false; // Previene que Cypress falle por errores de la aplicación
-});
+  return false; // Previene que Cypress falle por errores de la aplicación. Caso particular de este ejercicio, 
+  // se debe a que en la venta, el popup del mensaje al agregar producto al carro de compra, hay una variable oculta que es 
+  // (View Cart) igual a la usada en mi validacion para continuar con el flujo.
+}); 

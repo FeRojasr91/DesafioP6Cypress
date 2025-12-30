@@ -7,19 +7,19 @@ class Login{
     }
 
     completarEmailLog(){
-        cy.get(el.campoEmailLog).type(Cypress.env('emailRegistradoS'))
+        cy.get(el.campoEmailLog).type(Cypress.env('emailRegistradoS')).should('be.visible')
     }
 
     completarPassLog(){
-        cy.get(el.campoPassLog).type(Cypress.env('passwordRegistradaS'),{log:false})
+        cy.get(el.campoPassLog).type(Cypress.env('passwordRegistradaS'),{log:false}).should('be.visible')
     }
 
     completarPassLogError(passError){
-        cy.get(el.campoPassLog).type(passError)
+        cy.get(el.campoPassLog).type(passError).should('be.visible')
     }
 
     clickEnLogin(){
-        cy.get(el.botonLogin).click()
+        cy.get(el.botonLogin).click().should('be.visible')
     }
 
     validarInicioLogin(){

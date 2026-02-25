@@ -60,7 +60,7 @@ describe('Desafió P06 Cypress', function() {
     RegUserExis.validarMensajeError('Email Address already exist!')
   })
 
-  it.only('Realizar Login exitoso', function(){
+  it('Realizar Login exitoso', function(){
     Login.ClickSignUpLogin()            
     Login.completarEmailLog()
     Login.completarPassLog()
@@ -68,7 +68,7 @@ describe('Desafió P06 Cypress', function() {
     Login.validarInicioLogin()
   })
 
-  it.only ('Error de inicio de sesión', function() {
+  it('Error de inicio de sesión', function() {
     Login.ClickSignUpLogin()
     cy.get('@credencialesExt').then((datos) => {         
     Login.completarEmailLog()
